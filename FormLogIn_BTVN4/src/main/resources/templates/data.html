@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" th:href="@{/data.css}">
+</head>
+<body>
+<div class="container">
+  <table>
+      <caption>LIST ACCOUNT</caption>
+      <tr>
+          <th>Id</th>
+          <th>Full name</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th colspan="2">Action</th>
+      </tr>
+      <tr th:each="user :${dataUser}">
+          <td th:text="*{user.id}"></td>
+          <td th:text="*{user.fullName}"></td>
+          <td th:text="*{user.username}"></td>
+          <td th:text="*{user.password}"></td>
+          <td><a th:href="@{'/edit?id=' + ${user.id}}">Edit</a></td>
+          <td><a th:href="@{'/delete?id=' + ${user.id}}">Delete</a></td>
+      </tr>
+      <tr>
+          <td colspan="3" align="center"><a th:href="@{/hit}">SHOW VIEW API</a></td>
+          <td align="center" colspan="3"><a th:href="@{/create}">CREATE NEW USER</a></td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

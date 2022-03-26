@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<form method="post" th:action="@{/edit}" th:object="${account}">
+    <h3>EDIT USER</h3>
+    <input th:type="text" th:field="*{fullName}"></br>
+    <input th:type="text" th:field="*{username}"></br>
+    <input th:type="text" th:field="*{password}"></br>
+    <button th:type="submit">Submit</button>
+</form>
+</body>
+</html>

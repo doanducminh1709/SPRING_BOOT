@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+}
+caption{
+    color: red;
+    padding: 10px;
+    font-size: 30px;
+}
+table{
+    width: 500px;
+    border: 1px;
+    /*//border-collapse: collapse;*/
+    margin: 0 auto;
+}
+a{
+    color: black;
+    display: inline-block;
+    margin: 5px;
+}
+a:hover{
+    color: red;
+}
+td,th{
+    border: 1px solid black;
+    align:center;
+}
